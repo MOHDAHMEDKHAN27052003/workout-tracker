@@ -17,10 +17,10 @@ function App() {
         <Nav />
         <Routes>
           {/* workout routes */}
-          <Route path="/workout/:id" element={<Workout/>} />
-          <Route path="/workout/workouts" element={<Workouts/>} />
-          <Route path="/workout/create" element={<Create/>} />
-          <Route path="/workout/update/:id" element={<Update/>} />
+          <Route path="/workouts" element={<Workouts/>} />
+          <Route path="/workouts/:id" element={<Workout/>} />
+          <Route path="/workouts/create" element={<Create/>} />
+          <Route path="/workouts/update/:id" element={<Update/>} />
           
           {/* index routes */}
           <Route path="/" element={<Home/>} />
