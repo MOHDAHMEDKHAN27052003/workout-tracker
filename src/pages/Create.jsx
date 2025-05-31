@@ -3,22 +3,27 @@ import { WorkoutContext } from "../contexts/WorkoutContext";
 import { useForm } from "react-hook-form";
 import { nanoid } from "nanoid";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 function Create() {
     const { data, setData } = useContext(WorkoutContext);
     const { register, handleSubmit, reset } = useForm();
     const [imageData, setImageData] = useState(null);
     const fileInputRef = useRef(null);
+    const navigate = useNavigate();
 
     const handleImageUpload = (e) => {
         const file = e.target.files[0];
+
         if (file) {
             const reader = new FileReader();
+
             reader.onloadend = () => {
                 setImageData(reader.result);
             };
+
             reader.readAsDataURL(file);
-        }
+        };
     };
 
     const onError = (formErrors) => {
@@ -39,10 +44,11 @@ function Create() {
 
         const copyData = [...data, workout];
         setData(copyData);
-        localStorage.setItem("workout", JSON.stringify(copyData));
+        localStorage.setItem("workouts", JSON.stringify(copyData));
         toast.success("Workout added successfully!");
         reset();
         setImageData(null);
+        navigate("/workouts");
     };
 
     return (
@@ -119,7 +125,7 @@ function Create() {
                                     message: "Description must be at least 30 characters",
                                 },
                                 maxLength: {
-                                    value: 60,
+                                    value: 300,
                                     message: "Description cannot exceed 60 characters",
                                 },
                             })}
@@ -138,7 +144,7 @@ function Create() {
                                     message: "Excercises must be at least 30 characters",
                                 },
                                 maxLength: {
-                                    value: 60,
+                                    value: 300,
                                     message: "Excercises cannot exceed 60 characters",
                                 },
                             })}
@@ -157,7 +163,7 @@ function Create() {
                                     message: "Instructions must be at least 30 characters",
                                 },
                                 maxLength: {
-                                    value: 60,
+                                    value: 300,
                                     message: "Instructions cannot exceed 60 characters",
                                 },
                             })}
@@ -180,7 +186,7 @@ function Create() {
                         </select>
                     </div>
                     <div className="text-right">
-                        <button className="bg-green-500 px-4 py-2 rounded-lg cursor-pointer hover:scale-[95%]">Add Workout</button>
+                        <button className="bg-green-500 px-4 py-2 rounded-lg cursor-pointer hover:scale-[95%]">Save</button>
                     </div>
                 </form>
             </div>
