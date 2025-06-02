@@ -63,8 +63,8 @@ function Workout() {
 
     return (
         <>
-            <div className="m-8 flex flex-col gap-12">
-                <div className="p-8 bg-blue-500 text-white rounded-2xl">
+            <div className="m-8 sm:m-32 flex flex-col lg:flex-row gap-12 lg:justify-between">
+                <div className="p-8 sm:p-16 bg-blue-500 text-white rounded-2xl lg:w-1/2">
                     <div className="flex justify-center bg-gray-500 rounded-2xl p-4">
                         <img
                             src={workout.image}
