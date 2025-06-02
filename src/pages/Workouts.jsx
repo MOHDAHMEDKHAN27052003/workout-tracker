@@ -20,8 +20,8 @@ function Workouts() {
                         {data.length > 0 ? (
                             <div className="sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-12">
                                 {data.map(workout => (
-                                    <div className="py-4 sm:py-0">
-                                        <Card key={workout.id} workout={workout} />
+                                    <div key={workout.id} className="py-4 sm:py-0">
+                                        <Card workout={workout} />
                                     </div>
                                 ))}
                             </div>

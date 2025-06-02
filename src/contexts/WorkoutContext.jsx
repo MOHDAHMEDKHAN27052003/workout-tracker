@@ -7,7 +7,7 @@ export function WorkoutProvider(props) {
         JSON.parse(localStorage.getItem("workouts")) || []
     );
     const [favorites, setFavorites] = useState(
-        JSON.parse(localStorage.getItem("favroites")) || []
+        JSON.parse(localStorage.getItem("favorites")) || []
     );
 
     return (

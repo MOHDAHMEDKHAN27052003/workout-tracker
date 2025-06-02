@@ -8,7 +8,7 @@ function Card(props) {
             <div className="bg-blue-500 text-white px-8 py-16 mb-4 rounded-2xl text-center">
                 <Link to={`/workouts/${id}`}>
                     <div className="flex justify-center bg-gray-500 rounded-2xl py-4">
-                        <img src={image} alt="Workout image" className="h-24" />
+                        <img src={image} alt="Workout image" className="h-28 rounded-2xl" />
                     </div>
                     <h1 className="text-2xl pt-8">{name}</h1>
                     <h1 className="py-2"><strong>{coach}</strong></h1>

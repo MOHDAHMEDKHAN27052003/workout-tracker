@@ -2,8 +2,8 @@ function NotFound() {
     
     return (
         <>
-            <div>
-                <h1>Invalid URL!</h1>
+            <div className="p-4">
+                <h1 className="text-2xl">Invalid URL!</h1>
             </div>
         </>
     );
