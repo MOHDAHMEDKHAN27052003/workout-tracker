@@ -3,11 +3,13 @@ import Create from "./pages/Create";
 import Workout from "./pages/Workout";
 import NotFound from "./pages/NotFound";
 import Workouts from "./pages/Workouts";
+import HomeNav from "./components/HomeNav";
 
 function App() {
 
   return (
     <>
+      <HomeNav/>
       <div>
         <Routes>
           <Route path="/" element={<Workouts/>} />
