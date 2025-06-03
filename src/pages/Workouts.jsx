@@ -41,7 +41,7 @@ function Workouts() {
                             </div>
                             ) : (
                             <div>
-                                <h1>No workouts found. Try a different search term.</h1>
+                                <h1>No workout found!</h1>
                             </div>
                         )}
                     </div>
