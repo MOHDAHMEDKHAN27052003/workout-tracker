@@ -15,7 +15,6 @@ function App() {
           <Route path="/" element={<Workouts/>} />
           <Route path="/workouts/:id" element={<Workout/>} />
           <Route path="/workouts/create" element={<Create/>} />
-
           <Route path="*" element={<NotFound/>} />
         </Routes>
       </div>
