@@ -16,21 +16,14 @@ function Workouts() {
             <div className="m-8 sm:m-16">
                 <h1 className="text-4xl">Workouts</h1>
                 <div className="py-12">
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 sm:pb-8">
-                        <input
-                            type="text"
-                            placeholder="Search workout..."
-                            value={searchTerm}
-                            onChange={(e) => setSearchTerm(e.target.value)}
-                            className="outline-0 border border-gray-500 px-4 py-2 rounded-lg w-full sm:w-1/2"
-                        />
-                        <div className="text-right">
-                            <Link to="/workouts/create" className="bg-green-500 px-4 py-2 rounded-lg cursor-pointer text-white">
-                                Add Workout
-                            </Link>
-                        </div>
-                    </div>
-                    <div className="py-4">
+                    <input
+                        type="text"
+                        placeholder="Search workout..."
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                        className="outline-0 border border-gray-500 px-4 py-2 rounded-lg w-full md:w-1/2 lg:w-2/5"
+                    />
+                    <div className="py-12">
                         {filteredWorkouts.length > 0 ? (
                             <div className="sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-12">
                                 {filteredWorkouts.map(workout => (
@@ -41,7 +34,7 @@ function Workouts() {
                             </div>
                             ) : (
                             <div>
-                                <h1>No workout found!</h1>
+                                <h1 className="text-2xl text-center py-4">No workout found!</h1>
                             </div>
                         )}
                     </div>

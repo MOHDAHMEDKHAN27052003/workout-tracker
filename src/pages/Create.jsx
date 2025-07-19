@@ -30,9 +30,9 @@ function Create() {
 
     return (
         <>
-            <div className="flex justify-center">
-                <form onSubmit={handleSubmit(onSubmit, onError)} className="mx-4 my-8 px-8 py-16 rounded-2xl bg-blue-500 text-white" >
-                    <h1 className="text-4xl">Add workout :-</h1>
+            <div className="flex justify-center px-8 py-12 md:py-20">
+                <form onSubmit={handleSubmit(onSubmit, onError)} className="px-8 py-16 rounded-2xl bg-blue-500 text-white" >
+                    <h1 className="text-4xl">Add workout</h1>
                     <div className="py-8">
                         <label htmlFor="image" className="text-2xl">Image URL :</label>
                         <input
